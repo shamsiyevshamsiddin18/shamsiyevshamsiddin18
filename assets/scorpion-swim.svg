@@ -1,102 +1,207 @@
-<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Animated scorpion swimming banner</title>
-  <desc id="desc">A dark ocean style banner with a scorpion swimming across the background.</desc>
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated scorpion developer interface</title>
+  <desc id="desc">A futuristic developer profile banner with a swimming scorpion, neon water, and dashboard panels.</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#08111f" />
-      <stop offset="0.48" stop-color="#10234a" />
-      <stop offset="1" stop-color="#14122d" />
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020617" />
+      <stop offset="0.45" stop-color="#071A2F" />
+      <stop offset="1" stop-color="#0B1120" />
     </linearGradient>
-    <linearGradient id="water" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.05" />
-      <stop offset="0.5" stop-color="#60a5fa" stop-opacity="0.36" />
-      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.07" />
+
+    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(608 211) rotate(90) scale(270 430)">
+      <stop stop-color="#22D3EE" stop-opacity="0.36" />
+      <stop offset="0.5" stop-color="#0EA5E9" stop-opacity="0.11" />
+      <stop offset="1" stop-color="#020617" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="panel" x1="54" y1="62" x2="468" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A" stop-opacity="0.88" />
+      <stop offset="1" stop-color="#020617" stop-opacity="0.78" />
     </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#67E8F9" />
+      <stop offset="1" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <linearGradient id="water" x1="0" y1="240" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9" stop-opacity="0.04" />
+      <stop offset="0.52" stop-color="#22D3EE" stop-opacity="0.20" />
+      <stop offset="1" stop-color="#818CF8" stop-opacity="0.05" />
+    </linearGradient>
+
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#38BDF8" stroke-opacity="0.08" stroke-width="1" />
+    </pattern>
+
+    <filter id="glow" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.13 0 0 0 0 0.82 0 0 0 0 0.93 0 0 0 0.85 0" result="cyanBlur" />
       <feMerge>
-        <feMergeNode in="blur" />
+        <feMergeNode in="cyanBlur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+
+    <filter id="panelShadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="20" stdDeviation="25" flood-color="#020617" flood-opacity="0.58" />
+    </filter>
+
+    <clipPath id="round">
+      <rect width="1200" height="420" rx="32" />
+    </clipPath>
   </defs>
 
-  <rect width="1200" height="320" rx="28" fill="url(#bg)" />
-  <rect y="210" width="1200" height="110" fill="url(#water)" />
+  <g clip-path="url(#round)">
+    <rect width="1200" height="420" fill="url(#bg)" />
+    <rect width="1200" height="420" fill="url(#coreGlow)" />
+    <rect width="1200" height="420" fill="url(#grid)" />
+    <rect y="250" width="1200" height="170" fill="url(#water)" />
 
-  <g opacity="0.28" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round">
-    <path d="M-80 238 C 20 210, 120 266, 220 238 S 420 210, 520 238 S 720 266, 820 238 S 1020 210, 1120 238 S 1320 266, 1420 238">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="-220 0" dur="9s" repeatCount="indefinite" />
-    </path>
-    <path d="M-40 270 C 70 242, 170 296, 280 270 S 500 242, 610 270 S 830 296, 940 270 S 1160 242, 1270 270">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="-180 0" dur="12s" repeatCount="indefinite" />
-    </path>
-  </g>
+    <g opacity="0.16" stroke="#93C5FD" stroke-linecap="round">
+      <path d="M70 86H1130" />
+      <path d="M118 126H1082" />
+      <path d="M150 350H1050" />
+      <path d="M600 42V378" />
+      <path d="M466 210H734" />
+    </g>
 
-  <g opacity="0.18" fill="#ffffff">
-    <circle cx="150" cy="82" r="2" />
-    <circle cx="255" cy="42" r="1.6" />
-    <circle cx="430" cy="88" r="2.2" />
-    <circle cx="575" cy="55" r="1.7" />
-    <circle cx="760" cy="96" r="2" />
-    <circle cx="930" cy="44" r="1.8" />
-    <circle cx="1085" cy="92" r="2.3" />
-  </g>
+    <g opacity="0.33" stroke="#38BDF8" stroke-width="2" stroke-linecap="round">
+      <path d="M-180 284C-72 246 36 322 144 284C252 246 360 322 468 284C576 246 684 322 792 284C900 246 1008 322 1116 284C1224 246 1332 322 1440 284">
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-216 0" dur="10s" repeatCount="indefinite" />
+      </path>
+      <path d="M-120 326C-8 288 104 358 216 326C328 288 440 358 552 326C664 288 776 358 888 326C1000 288 1112 358 1224 326">
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-224 0" dur="13s" repeatCount="indefinite" />
+      </path>
+    </g>
 
-  <g opacity="0.16" stroke="#93c5fd" stroke-width="1">
-    <path d="M75 112 H1125" />
-    <path d="M120 146 H1080" />
-    <path d="M190 184 H1010" />
-  </g>
+    <g opacity="0.27" fill="#E0F2FE">
+      <circle cx="104" cy="74" r="2" />
+      <circle cx="228" cy="38" r="1.6" />
+      <circle cx="356" cy="92" r="2.3" />
+      <circle cx="512" cy="54" r="1.7" />
+      <circle cx="734" cy="72" r="2.2" />
+      <circle cx="900" cy="44" r="1.8" />
+      <circle cx="1074" cy="92" r="2.4" />
+      <circle cx="1112" cy="306" r="1.8" />
+      <circle cx="178" cy="314" r="1.8" />
+    </g>
 
-  <text x="600" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#e0f2fe" letter-spacing="4">
-    SHAMSIYEV SHAMSIDDIN
-  </text>
-  <text x="600" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#93c5fd" letter-spacing="3">
-    FRONTEND DEVELOPER - SCORPION MODE
-  </text>
+    <g opacity="0.22" stroke="#22D3EE">
+      <circle cx="600" cy="210" r="110" />
+      <circle cx="600" cy="210" r="148" />
+      <path d="M452 210H748" />
+      <path d="M600 62V358" />
+      <path d="M496 106L704 314" />
+      <path d="M704 106L496 314" />
+      <animateTransform attributeName="transform" type="rotate" from="0 600 210" to="360 600 210" dur="42s" repeatCount="indefinite" />
+    </g>
 
-  <g id="scorpion" filter="url(#glow)">
-    <animateTransform attributeName="transform" type="translate" values="-260 188; 470 156; 1240 188" keyTimes="0;0.52;1" dur="18s" repeatCount="indefinite" />
+    <g id="scorpion" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="translate" values="-350 238; 440 192; 1260 238" keyTimes="0;0.52;1" dur="19s" repeatCount="indefinite" />
 
-    <g transform="scale(1.15)">
-      <ellipse cx="85" cy="42" rx="39" ry="19" fill="#0f172a" stroke="#67e8f9" stroke-width="3" />
-      <ellipse cx="128" cy="42" rx="26" ry="16" fill="#111827" stroke="#67e8f9" stroke-width="3" />
-      <circle cx="145" cy="37" r="3" fill="#e0f2fe" />
+      <g transform="scale(1.32)">
+        <ellipse cx="92" cy="44" rx="43" ry="21" fill="#0F172A" stroke="#67E8F9" stroke-width="3.5" />
+        <ellipse cx="140" cy="44" rx="29" ry="18" fill="#111827" stroke="#67E8F9" stroke-width="3.5" />
+        <circle cx="158" cy="39" r="3.5" fill="#E0F2FE" />
+        <circle cx="80" cy="41" r="5" fill="#164E63" opacity="0.9" />
+        <circle cx="102" cy="45" r="4.5" fill="#164E63" opacity="0.9" />
 
-      <g stroke="#67e8f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M50 31 C 28 15, 13 15, 2 29" />
-        <path d="M50 53 C 25 67, 10 64, 0 48" />
-        <path d="M74 23 C 52 3, 41 1, 29 11" />
-        <path d="M74 61 C 51 78, 36 80, 22 69" />
-        <path d="M100 24 C 84 5, 77 3, 63 8" />
-        <path d="M100 60 C 83 77, 73 80, 59 75" />
+        <g stroke="#67E8F9" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M56 32C31 13 14 14 2 31" />
+          <path d="M56 56C29 73 11 70 -1 51" />
+          <path d="M81 24C57 1 42 0 29 12" />
+          <path d="M81 64C57 84 38 86 22 72" />
+          <path d="M111 25C92 4 78 2 64 9" />
+          <path d="M111 63C92 83 76 86 61 78" />
+        </g>
+
+        <g stroke="#67E8F9" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M157 33C193 8 217 13 238 37" />
+          <path d="M238 37L263 22" />
+          <path d="M238 37L265 50" />
+          <path d="M157 57C192 83 220 80 240 54" />
+          <path d="M240 54L264 41" />
+          <path d="M240 54L264 68" />
+        </g>
+
+        <g transform="translate(34 43)">
+          <animateTransform attributeName="transform" type="rotate" values="-9 58 0; 11 58 0; -9 58 0" dur="2.7s" repeatCount="indefinite" additive="sum" />
+          <path d="M0 0C-15 -28 -2 -60 30 -72C64 -84 91 -62 80 -36C72 -17 53 -16 49 -31C45 -46 59 -51 72 -40" stroke="#67E8F9" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M72 -40L92 -63L88 -30Z" fill="#67E8F9" />
+        </g>
+
+        <g opacity="0.78" stroke="#BAE6FD" stroke-width="2.2" stroke-linecap="round">
+          <path d="M16 104C66 84 128 120 184 98">
+            <animateTransform attributeName="transform" type="translate" values="0 0; 26 -5; 0 0" dur="2.2s" repeatCount="indefinite" />
+          </path>
+          <path d="M-6 124C40 102 101 140 158 118">
+            <animateTransform attributeName="transform" type="translate" values="0 0; 35 -4; 0 0" dur="2.8s" repeatCount="indefinite" />
+          </path>
+        </g>
+      </g>
+    </g>
+
+    <g filter="url(#panelShadow)">
+      <rect x="54" y="62" width="414" height="278" rx="26" fill="url(#panel)" stroke="#38BDF8" stroke-opacity="0.33" />
+      <rect x="732" y="62" width="414" height="278" rx="26" fill="url(#panel)" stroke="#38BDF8" stroke-opacity="0.33" />
+    </g>
+
+    <g font-family="Segoe UI, Arial, sans-serif">
+      <text x="86" y="104" fill="#67E8F9" font-size="13" font-weight="700" letter-spacing="3">PROFILE CORE</text>
+      <text x="86" y="152" fill="#E0F2FE" font-size="37" font-weight="800">Shamsiddin</text>
+      <text x="86" y="190" fill="#94A3B8" font-size="17" font-weight="600">Frontend Developer / Student</text>
+
+      <g font-size="14" font-weight="700">
+        <rect x="86" y="224" width="154" height="34" rx="17" fill="#0EA5E9" fill-opacity="0.16" stroke="#38BDF8" stroke-opacity="0.45" />
+        <circle cx="106" cy="241" r="5" fill="#22C55E" />
+        <text x="120" y="246" fill="#DFFBFF">ONLINE</text>
+
+        <rect x="254" y="224" width="166" height="34" rx="17" fill="#0EA5E9" fill-opacity="0.12" stroke="#38BDF8" stroke-opacity="0.35" />
+        <text x="277" y="246" fill="#BAE6FD">SCORPION MODE</text>
       </g>
 
-      <g stroke="#67e8f9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M143 31 C 175 10, 196 13, 215 34" />
-        <path d="M215 34 L237 21" />
-        <path d="M215 34 L239 46" />
-        <path d="M143 53 C 174 75, 198 72, 216 50" />
-        <path d="M216 50 L238 38" />
-        <path d="M216 50 L238 62" />
+      <g fill="#CBD5E1" font-size="14" font-weight="600">
+        <text x="86" y="292">Clean UI</text>
+        <text x="196" y="292">Real Projects</text>
+        <text x="334" y="292">Daily Growth</text>
       </g>
 
-      <g transform="translate(31 41)">
-        <animateTransform attributeName="transform" type="rotate" values="-8 52 0; 10 52 0; -8 52 0" dur="2.8s" repeatCount="indefinite" additive="sum" />
-        <path d="M0 0 C -12 -23, -2 -51, 26 -61 C 55 -72, 77 -52, 68 -30 C 62 -14, 46 -13, 42 -26 C 38 -38, 50 -42, 60 -34" stroke="#67e8f9" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M59 -34 L75 -53 L72 -27 Z" fill="#67e8f9" />
+      <g stroke="#22D3EE" stroke-width="6" stroke-linecap="round">
+        <path d="M86 312H146" />
+        <path d="M196 312H278" />
+        <path d="M334 312H420" />
       </g>
+    </g>
 
-      <g opacity="0.75" stroke="#bae6fd" stroke-width="2" stroke-linecap="round">
-        <path d="M18 96 C 60 80, 120 110, 168 92">
-          <animateTransform attributeName="transform" type="translate" values="0 0; 24 -4; 0 0" dur="2.2s" repeatCount="indefinite" />
-        </path>
-        <path d="M0 112 C 38 95, 89 128, 140 110">
-          <animateTransform attributeName="transform" type="translate" values="0 0; 32 -3; 0 0" dur="2.6s" repeatCount="indefinite" />
-        </path>
+    <g font-family="Segoe UI, Arial, sans-serif">
+      <text x="764" y="104" fill="#67E8F9" font-size="13" font-weight="700" letter-spacing="3">LIVE STACK</text>
+      <text x="764" y="146" fill="#E0F2FE" font-size="30" font-weight="800">Code Interface</text>
+
+      <g font-size="14" font-weight="700">
+        <rect x="764" y="176" width="320" height="42" rx="14" fill="#020617" fill-opacity="0.58" stroke="#38BDF8" stroke-opacity="0.22" />
+        <text x="786" y="202" fill="#38BDF8">01</text>
+        <text x="828" y="202" fill="#E5E7EB">HTML / CSS / JavaScript</text>
+
+        <rect x="764" y="228" width="320" height="42" rx="14" fill="#020617" fill-opacity="0.58" stroke="#38BDF8" stroke-opacity="0.22" />
+        <text x="786" y="254" fill="#38BDF8">02</text>
+        <text x="828" y="254" fill="#E5E7EB">TypeScript / Git / GitHub</text>
+
+        <rect x="764" y="280" width="320" height="42" rx="14" fill="#020617" fill-opacity="0.58" stroke="#38BDF8" stroke-opacity="0.22" />
+        <text x="786" y="306" fill="#38BDF8">03</text>
+        <text x="828" y="306" fill="#E5E7EB">Python / Backend Path</text>
       </g>
+    </g>
+
+    <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+      <text x="600" y="58" fill="#F8FAFC" font-size="18" font-weight="800" letter-spacing="5">SHAMSIYEV SHAMSIDDIN</text>
+      <text x="600" y="380" fill="#67E8F9" font-size="14" font-weight="700" letter-spacing="4">BUILD FAST - LEARN DEEP - STAY SHARP</text>
+    </g>
+
+    <g opacity="0.75">
+      <rect x="0.5" y="0.5" width="1199" height="419" rx="31.5" stroke="#38BDF8" stroke-opacity="0.33" />
+      <rect x="18.5" y="18.5" width="1163" height="383" rx="23.5" stroke="#E0F2FE" stroke-opacity="0.06" />
     </g>
   </g>
 </svg>
