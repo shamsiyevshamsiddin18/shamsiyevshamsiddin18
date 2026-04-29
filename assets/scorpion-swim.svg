@@ -1,0 +1,102 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated scorpion swimming banner</title>
+  <desc id="desc">A dark ocean style banner with a scorpion swimming across the background.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08111f" />
+      <stop offset="0.48" stop-color="#10234a" />
+      <stop offset="1" stop-color="#14122d" />
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.05" />
+      <stop offset="0.5" stop-color="#60a5fa" stop-opacity="0.36" />
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.07" />
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="28" fill="url(#bg)" />
+  <rect y="210" width="1200" height="110" fill="url(#water)" />
+
+  <g opacity="0.28" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round">
+    <path d="M-80 238 C 20 210, 120 266, 220 238 S 420 210, 520 238 S 720 266, 820 238 S 1020 210, 1120 238 S 1320 266, 1420 238">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-220 0" dur="9s" repeatCount="indefinite" />
+    </path>
+    <path d="M-40 270 C 70 242, 170 296, 280 270 S 500 242, 610 270 S 830 296, 940 270 S 1160 242, 1270 270">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-180 0" dur="12s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <g opacity="0.18" fill="#ffffff">
+    <circle cx="150" cy="82" r="2" />
+    <circle cx="255" cy="42" r="1.6" />
+    <circle cx="430" cy="88" r="2.2" />
+    <circle cx="575" cy="55" r="1.7" />
+    <circle cx="760" cy="96" r="2" />
+    <circle cx="930" cy="44" r="1.8" />
+    <circle cx="1085" cy="92" r="2.3" />
+  </g>
+
+  <g opacity="0.16" stroke="#93c5fd" stroke-width="1">
+    <path d="M75 112 H1125" />
+    <path d="M120 146 H1080" />
+    <path d="M190 184 H1010" />
+  </g>
+
+  <text x="600" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#e0f2fe" letter-spacing="4">
+    SHAMSIYEV SHAMSIDDIN
+  </text>
+  <text x="600" y="112" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#93c5fd" letter-spacing="3">
+    FRONTEND DEVELOPER - SCORPION MODE
+  </text>
+
+  <g id="scorpion" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="translate" values="-260 188; 470 156; 1240 188" keyTimes="0;0.52;1" dur="18s" repeatCount="indefinite" />
+
+    <g transform="scale(1.15)">
+      <ellipse cx="85" cy="42" rx="39" ry="19" fill="#0f172a" stroke="#67e8f9" stroke-width="3" />
+      <ellipse cx="128" cy="42" rx="26" ry="16" fill="#111827" stroke="#67e8f9" stroke-width="3" />
+      <circle cx="145" cy="37" r="3" fill="#e0f2fe" />
+
+      <g stroke="#67e8f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 31 C 28 15, 13 15, 2 29" />
+        <path d="M50 53 C 25 67, 10 64, 0 48" />
+        <path d="M74 23 C 52 3, 41 1, 29 11" />
+        <path d="M74 61 C 51 78, 36 80, 22 69" />
+        <path d="M100 24 C 84 5, 77 3, 63 8" />
+        <path d="M100 60 C 83 77, 73 80, 59 75" />
+      </g>
+
+      <g stroke="#67e8f9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M143 31 C 175 10, 196 13, 215 34" />
+        <path d="M215 34 L237 21" />
+        <path d="M215 34 L239 46" />
+        <path d="M143 53 C 174 75, 198 72, 216 50" />
+        <path d="M216 50 L238 38" />
+        <path d="M216 50 L238 62" />
+      </g>
+
+      <g transform="translate(31 41)">
+        <animateTransform attributeName="transform" type="rotate" values="-8 52 0; 10 52 0; -8 52 0" dur="2.8s" repeatCount="indefinite" additive="sum" />
+        <path d="M0 0 C -12 -23, -2 -51, 26 -61 C 55 -72, 77 -52, 68 -30 C 62 -14, 46 -13, 42 -26 C 38 -38, 50 -42, 60 -34" stroke="#67e8f9" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M59 -34 L75 -53 L72 -27 Z" fill="#67e8f9" />
+      </g>
+
+      <g opacity="0.75" stroke="#bae6fd" stroke-width="2" stroke-linecap="round">
+        <path d="M18 96 C 60 80, 120 110, 168 92">
+          <animateTransform attributeName="transform" type="translate" values="0 0; 24 -4; 0 0" dur="2.2s" repeatCount="indefinite" />
+        </path>
+        <path d="M0 112 C 38 95, 89 128, 140 110">
+          <animateTransform attributeName="transform" type="translate" values="0 0; 32 -3; 0 0" dur="2.6s" repeatCount="indefinite" />
+        </path>
+      </g>
+    </g>
+  </g>
+</svg>
